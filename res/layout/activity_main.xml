@@ -1,0 +1,139 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/wood_texture" >
+
+    <TextView
+        android:id="@+id/turn_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="35dp"
+        android:layout_marginRight="35dp"
+        android:layout_marginTop="24dp"
+        android:gravity="center"
+        android:textSize="32.0sp"
+        android:textStyle="bold" />
+
+    <TableLayout
+        android:id="@+id/button_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="2dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginRight="2dp"
+        android:layout_marginTop="2dp"
+        android:background="@drawable/tictactoe_board" >
+
+        <TableRow android:layout_marginBottom="8dp" >
+
+            <com.sleepygarden.helloworld.TripTButton
+                android:id="@+id/top_left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="7dp"
+                android:minHeight="100dp"
+                android:minWidth="100dp"
+                android:src="@drawable/red_x" />
+
+            <com.sleepygarden.helloworld.TripTButton
+                android:id="@+id/top_mid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="7dp"
+                android:minHeight="100dp"
+                android:minWidth="100dp"
+                android:src="@drawable/red_x" />
+
+            <com.sleepygarden.helloworld.TripTButton
+                android:id="@+id/top_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minHeight="100dp"
+                android:minWidth="100dp"
+                android:src="@drawable/red_x" />
+        </TableRow>
+
+        <TableRow android:layout_marginBottom="8dp" >
+
+            <com.sleepygarden.helloworld.TripTButton
+                android:id="@+id/mid_left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="7dp"
+                android:minHeight="100dp"
+                android:minWidth="100dp"
+                android:src="@drawable/red_x" />
+
+            <com.sleepygarden.helloworld.TripTButton
+                android:id="@+id/mid_mid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="7dp"
+                android:minHeight="100dp"
+                android:minWidth="100dp"
+                android:src="@drawable/red_x" />
+
+            <com.sleepygarden.helloworld.TripTButton
+                android:id="@+id/mid_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minHeight="100dp"
+                android:minWidth="100dp"
+                android:src="@drawable/red_x" />
+        </TableRow>
+
+        <TableRow>
+
+            <com.sleepygarden.helloworld.TripTButton
+                android:id="@+id/bot_left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="7dp"
+                android:minHeight="100dp"
+                android:minWidth="100dp"
+                android:src="@drawable/red_x" />
+
+            <com.sleepygarden.helloworld.TripTButton
+                android:id="@+id/bot_mid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="7dp"
+                android:minHeight="100dp"
+                android:minWidth="100dp"
+                android:src="@drawable/red_x" />
+
+            <com.sleepygarden.helloworld.TripTButton
+                android:id="@+id/bot_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minHeight="100dp"
+                android:minWidth="100dp"
+                android:src="@drawable/red_x" />
+        </TableRow>
+    </TableLayout>
+
+    <TextView
+        android:id="@+id/win_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/turn_tv"
+        android:layout_alignRight="@id/turn_tv"
+        android:layout_below="@id/button_layout"
+        android:gravity="center"
+        android:textSize="32.0sp"
+        android:textStyle="bold"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/new_game"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:text="New Game" />
+
+</RelativeLayout>
