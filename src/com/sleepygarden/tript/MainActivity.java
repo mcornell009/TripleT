@@ -1,4 +1,6 @@
-package com.sleepygarden.helloworld;
+package com.sleepygarden.tript;
+
+import com.sleepygarden.tript.R;
 
 import android.os.Bundle;
 import android.app.Activity;
@@ -6,11 +8,10 @@ import android.graphics.drawable.Drawable;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 public class MainActivity extends Activity {
-
+	// top, left, right, mid, bottom
 	TripTButton tl, tm, tr, ml, mm, mr, bl, bm, br;
 	Button newGame;
 	TextView turnIndicator, winIndicator;
@@ -22,7 +23,9 @@ public class MainActivity extends Activity {
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-
+		//our views are all laid out in XML in the "res" folder. In fact, everything that isn't code that _is_ compiled lives in "res"
+		//this includes localized strings, images, and our XML layout files
+		//tether our instance variables to our XML references.
 		tl = (TripTButton) findViewById(R.id.top_left);
 		tm = (TripTButton) findViewById(R.id.top_mid);
 		tr = (TripTButton) findViewById(R.id.top_right);
@@ -89,6 +92,7 @@ public class MainActivity extends Activity {
 	}
 	
 	public void checkForWin(){
+		// Using some math and the TripTBtn mark values, we can surmise that a sum of 3 can only be brought about by 3 X's and a sum of 12 can only be brought by O's
 		boolean gameOver = false;
 		
 		//X wins

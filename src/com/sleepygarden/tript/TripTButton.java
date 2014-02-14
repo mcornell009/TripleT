@@ -3,12 +3,15 @@
  * @author sleepygarden
  *
  */
-package com.sleepygarden.helloworld;
+package com.sleepygarden.tript;
 
 import android.content.Context;
 import android.util.AttributeSet;
 import android.widget.ImageView;
 
+/*
+ * A Custom image view which also owns a reference to it's X or O state
+ */
 public class TripTButton extends ImageView {
 	int mark = 0; // 0 is blank, 1 is X, 4 is circle
 
